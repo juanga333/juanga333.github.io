@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto | ZeroSurface</title>
+        <meta name="description" content="Contacto de ZeroSurface para servicios de pentesting, evaluación de amenazas y análisis forense digital." />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body id="contacto">
+        <header class="site-header">
+            <div class="container header-inner">
+                <div class="logo">
+                    <a href="index.html">ZeroSurface</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="sobre.html">Sobre mí</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-main container">
+            <h1>Contacto</h1>
+            <section class="contact-intro">
+    <p>
+        Si quieres plantear una evaluación ofensiva, comentar un posible incidente o simplemente resolver dudas sobre cómo
+        enfocar la seguridad en tu entorno, puedes contactarme a través del formulario o directamente por correo.
+    </p>
+</section>
+
+<section class="contact-details">
+    <h2>Datos de contacto</h2>
+    <p>
+        Correo electrónico: <a href="mailto:contacto@zerosurface.es">contacto@zerosurface.es</a>
+    </p>
+    <p class="note">
+        Puedes modificar esta dirección en el código si prefieres utilizar otra cuenta.
+    </p>
+</section>
+
+<section class="contact-form-section">
+    <h2>Formulario de contacto</h2>
+    <p class="note">
+        Este formulario utiliza <code>mailto:</code>, por lo que abrirá tu cliente de correo. Para integraciones más avanzadas
+        (formularios con backend), será necesario añadir un servicio adicional.
+    </p>
+    <form class="contact-form" method="post" action="mailto:contacto@zerosurface.es" enctype="text/plain">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="Nombre" required />
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="Correo" required />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="Mensaje" rows="6" required></textarea>
+
+        <button type="submit" class="btn primary">Enviar</button>
+    </form>
+</section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>© 2025 ZeroSurface. Todos los derechos reservados.</p>
+                <nav class="footer-nav">
+                    <a href="aviso-legal.html">Aviso legal</a>
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="cookies.html">Cookies</a>
+                </nav>
+            </div>
+        </footer>
+    </body>
+    </html>
