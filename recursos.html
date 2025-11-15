@@ -1,66 +1,187 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Recursos, libros y guías | ZeroSurface</title>
-        <meta name="description" content="Recursos de ZeroSurface: libros, guías y material práctico sobre pentesting, evaluación de amenazas y análisis forense digital." />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body id="recursos">
-        <header class="site-header">
-            <div class="container header-inner">
-                <div class="logo">
-                    <a href="index.html">ZeroSurface</a>
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="recursos.html">Recursos</a></li>
-                        <li><a href="sobre.html">Sobre mí</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeroSurface Academy · Formación práctica en ciberseguridad</title>
+    <meta name="description" content="ZeroSurface Academy ofrece formación técnica práctica en ciberseguridad ofensiva y forense digital. Curso de análisis forense digital próximamente disponible." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body id="recursos">
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+    <a href="index.html">
+        <img src="img/zerosurface-academy-logo.png"
+             alt="ZeroSurface Academy"
+             class="logo-img-academy" />
+    </a>
+</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="recursos.html">Academy</a></li>
+                <li><a href="sobre.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <main class="site-main container">
-            <h1>Recursos, libros y material práctico</h1>
-            <section class="resources-intro">
+<main class="site-main container">
+
+<h1 class="fade-in">ZeroSurface Academy</h1>
+
+<section class="resources-intro resources-intro-academy slide-left">
+    <div class="academy-hero-layout">
+        <div>
+            <p class="section-kicker">Formación práctica • En desarrollo</p>
+            <h2>Formación especializada en forense digital</h2>
+            <p>
+                ZeroSurface Academy es la división de formación técnica especializada en ciberseguridad.
+                Nuestro enfoque se centra en <strong>formación práctica</strong> orientada a profesionales 
+                que necesitan habilidades aplicables en el día a día, no solo teoría.
+            </p>
+        </div>
+        <div class="academy-status-panel scale-in delay-1">
+            <div class="status-badge">🛠️ En desarrollo</div>
+            <p>Estamos preparando contenido técnico de alta calidad para profesionales de ciberseguridad</p>
+        </div>
+    </div>
+</section>
+
+<section class="resource-block course-highlight slide-right">
+    <div class="course-header">
+        <div class="course-status">
+            <span class="status-badge coming-soon">🗓️ Próximamente</span>
+        </div>
+        <h2>Curso: Análisis Forense Digital</h2>
+        <p class="course-subtitle">
+            Formación práctica en DFIR orientada a incidentes reales
+        </p>
+    </div>
+    
+    <div class="course-description">
+        <p>
+            Este curso está diseñado para profesionales técnicos que necesitan capacidades reales 
+            de análisis forense digital. El enfoque es 100% práctico, con laboratorios orientados a CTFs.
+        </p>
+
+    <h3>¿A quién va dirigido?</h3>
     <p>
-        En esta sección iré recopilando libros, guías, plantillas y otros recursos relacionados con pentesting, evaluación de
-        amenazas y análisis forense digital.
+        Está orientado a:
+    </p>
+    <ul class="card-list">
+        <li>Profesionales de ciberseguridad que quieren entrar en DFIR/forense digital.</li>
+        <li>Técnicos de sistemas que acaban gestionando incidentes “porque no hay nadie más”.</li>
+        <li>Estudiantes de seguridad que buscan un enfoque práctico aplicado a casos reales.</li>
+    </ul>
+
+    <h3>Qué serás capaz de hacer al terminar</h3>
+    <ul class="card-list">
+        <li>Plantear una adquisición en frío o en caliente sin comprometer la evidencia.</li>
+        <li>Identificar y extraer artefactos relevantes en Windows y Linux.</li>
+        <li>Construir y leer timelines combinando múltiples fuentes.</li>
+        <li>Detectar actividad sospechosa (procesos, servicios, conexiones, cambios de configuración).</li>
+        <li>Elaborar un informe forense que se pueda usar en un entorno real.</li>
+    </ul>
+
+    <h3>Contenido del curso (resumen)</h3>
+    <ul class="card-list">
+        <li><strong>Fundamentos de análisis forense digital</strong>: modelo mental, evidencia y documentación mínima.</li>
+        <li><strong>Adquisición de evidencias</strong>: en frío, en caliente, imágenes de disco y sistemas en producción.</li>
+        <li><strong>Análisis forense en Windows</strong>: usuarios, procesos, servicios, tareas, logs y artefactos típicos.</li>
+        <li><strong>Análisis forense en Linux</strong>: usuarios, procesos, servicios, cron, logs y rastros de ejecución.</li>
+        <li><strong>Timelines y correlación de eventos</strong>: fuentes de tiempo, construcción y lectura práctica.</li>
+        <li><strong>Informe forense y comunicación</strong>: estructura mínima, redacción para técnicos y gestión.</li>
+    </ul>
+
+    <h3>Formato y acceso</h3>
+    <p>
+        El curso se imparte en modalidad online, a tu ritmo, a través de una plataforma externa. Incluye clases en vídeo
+        y material descargable orientado a casos prácticos. El acceso se gestiona íntegramente desde esa plataforma.
+    </p>
+
+    <p class="service-cta">
+        El curso se gestiona a través de <strong>Gumroad</strong>, donde se encuentran los detalles completos sobre
+        contenido, formato y condiciones de acceso.
+        <br><br>
+        <!--👉 <strong><a href="https://tu-enlace-de-gumroad-aqui" target="_blank" rel="noopener">Ver la ficha completa del curso y acceder en Gumroad</a></strong>-->
     </p>
 </section>
 
 <section class="resource-block">
-    <h2>Libro de análisis forense digital (en preparación)</h2>
+    <h2>Quién imparte el curso</h2>
     <p>
-        Estoy trabajando en un libro práctico sobre análisis forense digital, centrado en metodologías, adquisición de evidencias,
-        análisis en sistemas Windows y Linux, timeline de eventos y elaboración de informes forenses útiles.
+        El curso está impartido por <strong>Juan Gabriel Ruiz Fernández</strong>,  fundador y responsable de ciberseguridad en ZeroSurface y responsable de un equipo de evaluación de amenazas en una unidad de ciberseguridad de la administración pública española. 
     </p>
     <p>
-        El contenido estará alineado con la forma en que trabajo en casos reales, con ejemplos prácticos y escenarios inspirados
-        en situaciones de producción.
-    </p>
-    <p class="placeholder">
-        Próximamente se publicará más información sobre el índice de contenidos, formato y forma de adquisición.
+        Está especializado en auditorías de seguridad y análisis forense digital, y es profesor en U-tad, donde imparte las asignaturas de Análisis Forense Digital y Desarrollo de Herramientas de Ciberseguridad. Cuenta, entre otras, con las certificaciones OSCP, OSEP, CRTE y CRTO, además de varios años de experiencia diseñando e impartiendo formación técnica en ciberseguridad y forense.
     </p>
 </section>
 
-        </main>
-
-        <footer class="site-footer">
-            <div class="container footer-inner">
-                <p>© 2025 ZeroSurface. Todos los derechos reservados.</p>
-                <nav class="footer-nav">
-                    <a href="aviso-legal.html">Aviso legal</a>
-                    <a href="privacidad.html">Privacidad</a>
-                    <a href="cookies.html">Cookies</a>
-                </nav>
+<section class="resource-block academy-contact-section fade-in">
+    <div class="contact-academy-content">
+        <h2>¿Tienes preguntas sobre el curso?</h2>
+        <p>
+            Si quieres recibir más información sobre el desarrollo del curso, contenido detallado, 
+            fechas estimadas de lanzamiento o resolver cualquier duda técnica sobre la formación:
+        </p>
+        
+        <div class="contact-academy-card">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+                <h3>Contacto directo</h3>
+                <p>Envía tus consultas sobre ZeroSurface Academy al correo:</p>
+                <a href="mailto:zerosurfacesec@gmail.com" class="email-link">zerosurfacesec@gmail.com</a>
+                <p class="contact-note">
+                    💡 <strong>Tip:</strong> Incluye en el asunto "Consulta Academy" para una respuesta más rápida
+                </p>
             </div>
-        </footer>
-    </body>
-    </html>
+        </div>
+        
+        <div class="contact-topics">
+            <p><strong>Puedes preguntar sobre:</strong></p>
+            <ul>
+                <li>📅 Fechas estimadas de lanzamiento del curso</li>
+                <li>📚 Contenido detallado y prerrequisitos</li>
+                <li>💰 Información sobre precios cuando esté disponible</li>
+                <li>🎯 Si el curso se ajusta a tu perfil profesional</li>
+                <li>🛠️ Herramientas y laboratorios que se incluirán</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 ZeroSurface Security.</p>
+        <nav class="footer-nav">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
+</body>
+</html>

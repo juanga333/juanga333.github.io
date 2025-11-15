@@ -1,112 +1,379 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ZeroSurface – Evaluación de amenazas, pentesting y análisis forense</title>
-        <meta name="description" content="ZeroSurface ofrece servicios especializados de evaluación de amenazas, pentesting y análisis forense digital basados en experiencia real en entornos críticos." />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body id="home">
-        <header class="site-header">
-            <div class="container header-inner">
-                <div class="logo">
-                    <a href="index.html">ZeroSurface</a>
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="recursos.html">Recursos</a></li>
-                        <li><a href="sobre.html">Sobre mí</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main class="site-main container">
-            <h1>ZeroSurface: evaluación de amenazas, pentesting y análisis forense</h1>
-            <section class="hero">
-    <div class="hero-text">
-        <p class="eyebrow">Evaluación de amenazas · Pentesting · Forense digital</p>
-        <p class="hero-role">Responsable de un equipo de evaluación de amenazas en la administración pública española.</p>
-        <p class="hero-lead">
-            Desde ZeroSurface aplico ese enfoque ofensivo y forense para ayudarte a entender
-            cómo puede ser atacada tu organización y qué huella deja un incidente real.
-        </p>
-        <div class="hero-actions">
-            <a class="btn primary" href="servicios.html">Ver servicios</a>
-            <a class="btn secondary" href="contacto.html">Contactar</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeroSurface Security - Ciberseguridad Avanzada | Pentesting, Red Team y Análisis Forense</title>
+    <meta name="description" content="⭐ Empresa líder en ciberseguridad: Pentesting profesional, gestión de vulnerabilidades, Red Team y análisis forense digital. Auditorías de seguridad empresariales. ✅ Consulta gratuita" />
+    <meta name="keywords" content="ciberseguridad, pentesting, auditoría seguridad informática, análisis forense digital, gestión vulnerabilidades, red team, ethical hacking, consultor ciberseguridad, seguridad aplicaciones web" />
+    
+    <meta name="author" content="ZeroSurface Security" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="Spanish" />
+    <meta name="geo.region" content="ES" />
+    <meta name="geo.country" content="Spain" />
+    <meta name="geo.placename" content="España" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="ZeroSurface Security - Ciberseguridad Avanzada" />
+    <meta property="og:description" content="Servicios profesionales de pentesting, auditorías de seguridad y análisis forense digital. Protegemos empresas contra ciberamenazas avanzadas." />
+    <meta property="og:image" content="./img/zerosurface-security-logo.png" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="ZeroSurface Security" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="./">
+    <meta name="twitter:title" content="ZeroSurface Security - Ciberseguridad Avanzada" />
+    <meta name="twitter:description" content="Pentesting profesional, auditorías de seguridad y análisis forense digital de nivel enterprise" />
+    <meta name="twitter:image" content="./img/zerosurface-security-logo.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="./">
+    <link rel="sitemap" type="application/xml" href="./sitemap.xml" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ZeroSurface Security",
+        "alternateName": "ZeroSurface",
+        "description": "Empresa especializada en servicios de ciberseguridad avanzada: pentesting profesional, gestión de vulnerabilidades, red team operations y análisis forense digital",
+        "url": "./",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "./img/zerosurface-security-logo.png"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "url": "./contacto.html",
+            "availableLanguage": "Spanish"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "España"
+        },
+        "serviceType": [
+            "Pentesting",
+            "Auditoría de Seguridad Informática", 
+            "Gestión de Vulnerabilidades",
+            "Red Team Operations",
+            "Análisis Forense Digital",
+            "Ethical Hacking",
+            "Incident Response",
+            "Consultoría en Ciberseguridad"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Ciberseguridad",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Penetration Testing y Auditorías de Seguridad",
+                        "description": "Pruebas de penetración y auditorías de seguridad para aplicaciones web, móviles e infraestructura"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Gestión de Vulnerabilidades",
+                        "description": "Identificación, priorización y gestión continua de vulnerabilidades críticas"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Red Team Operations",
+                        "description": "Simulación de ataques adversarios avanzados para evaluar defensas empresariales"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Análisis Forense Digital",
+                        "description": "Investigación forense e incident response para reconstruir ataques"
+                    }
+                }
+            ]
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "ZeroSurface Security Team"
+        },
+        "foundingDate": "2024",
+        "industry": "Ciberseguridad",
+        "knowsAbout": [
+            "Ethical Hacking",
+            "Pentesting", 
+            "OWASP",
+            "MITRE ATT&CK",
+            "ISO 27001",
+            "NIST Framework",
+            "Incident Response",
+            "Malware Analysis",
+            "Digital Forensics"
+        ]
+    }
+    </script>
+</head>
+<body id="home">
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/zerosurface-security-logo.png"
+                     alt="ZeroSurface Security - Empresa de Ciberseguridad y Pentesting en España"
+                     class="logo-img-security" />
+            </a>
         </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="recursos.html">Academy</a></li>
+                <li><a href="sobre.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+</header>
 
-<section class="home-section">
-    <h2>Servicios especializados</h2>
-    <div class="cards">
-        <article class="card">
-            <h3>Pentesting y evaluación ofensiva</h3>
-            <p>
-                Simulación de ataques reales contra aplicaciones web, APIs e infraestructuras expuestas
-                para medir de forma objetiva tu nivel de exposición y priorizar la remediación.
-            </p>
-            <a href="servicios.html#pentesting" class="card-link">Más sobre pentesting</a>
-        </article>
-        <article class="card">
-            <h3>Análisis forense digital</h3>
-            <p>
-                Adquisición y análisis forense de sistemas para reconstruir incidentes, entender el alcance
-                real del compromiso y definir medidas correctivas basadas en evidencia.
-            </p>
-            <a href="servicios.html#forense" class="card-link">Más sobre forense</a>
-        </article>
-    </div>
-</section>
+<main class="site-main container">
 
-<section class="home-section home-section-alt">
-    <h2>Experiencia en entornos críticos</h2>
-    <p>
-        Mi trabajo diario se desarrolla en una unidad de ciberseguridad de la administración pública española,
-        en entornos relacionados con defensa y sistemas de alta criticidad. Ese contexto marca la forma de
-        abordar cada evaluación: entender el escenario de amenazas, los impactos reales y la capacidad de
-        detección y respuesta.
-    </p>
-</section>
-
-<section class="home-section">
-    <h2>Blog y recursos técnicos</h2>
-    <p>
-        En el blog de ZeroSurface encontrarás artículos sobre pentesting, análisis forense, evaluación de amenazas
-        y casos prácticos. También publicaré libros, guías y material descargable orientado a perfiles técnicos.
-    </p>
-    <div class="home-links">
-        <a class="btn ghost" href="blog.html">Ir al blog</a>
-        <a class="btn ghost" href="recursos.html">Ver recursos</a>
-    </div>
-</section>
-
-<section class="home-section home-section-cta">
-    <h2>¿Quieres entender tu superficie de ataque o reconstruir un incidente?</h2>
-    <p>
-        Cuéntame tu caso y vemos cómo enfocar una evaluación ofensiva o un análisis forense que aporte
-        información útil para tomar decisiones, no solo un informe más.
-    </p>
-    <a class="btn primary" href="contacto.html">Contáctame</a>
-</section>
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="container footer-inner">
-                <p>© 2025 ZeroSurface. Todos los derechos reservados.</p>
-                <nav class="footer-nav">
-                    <a href="aviso-legal.html">Aviso legal</a>
-                    <a href="privacidad.html">Privacidad</a>
-                    <a href="cookies.html">Cookies</a>
-                </nav>
+    <!-- HERO -->
+    <section class="hero hero-security">
+        <div class="hero-centered">
+            <div class="hero-copy-centered">
+                <p class="hero-kicker">Ciberseguridad • Pentesting • Red Team • Análisis Forense</p>
+                <h1>Evaluación de amenazas para tu entorno.</h1>
+                <p class="hero-lead">
+                    En <strong>ZeroSurface Security</strong> nos dedicamos a <strong> ciberseguridad </strong> ofensiva y análisis forense. Auditamos tu infraestructura para entender cómo se podría comprometer y qué hacer antes y después de un incidente.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="servicios.html">Ver servicios</a>
+                    <a class="btn ghost" href="contacto.html">Plantear un caso</a>
+                </div>
             </div>
-        </footer>
-    </body>
-    </html>
+
+            <!-- Estadísticas horizontales debajo -->
+            <div class="hero-stats-horizontal">
+                <div class="hero-stat-horizontal">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                    <div class="stat-description">Especializándonos en ciberseguridad y ethical hacking profesional</div>
+                </div>
+                <div class="hero-stat-horizontal">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Compromiso</div>
+                    <div class="stat-description">Dedicación total a la protección de tu infraestructura digital</div>
+                </div>
+                <div class="hero-stat-horizontal certifications-stat-horizontal">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Experiencia avalada</div>
+                    <div class="cert-logos">
+                        <img src="./img/oscp-logo.png" alt="OSCP" class="cert-logo" title="Offensive Security Certified Professional">
+                        <img src="./img/osep-logo.png" alt="OSEP" class="cert-logo" title="Offensive Security Experienced Penetration Tester">
+                        <img src="./img/crte-logo.png" alt="CRTE" class="cert-logo" title="Certified Red Team Expert">
+                        <img src="./img/crto-logo.png" alt="CRTO" class="cert-logo" title="Certified Red Team Operator">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS ELITE -->
+    <section class="home-section elite-services fade-in">
+        <div class="section-header slide-left">
+            <p class="section-kicker">Nuestros servicios</p>
+            <h2>Vulnerabilidades, Pentesting, Red Team y Forense Digital</h2>
+        </div>
+        <div class="services-grid-advanced">
+            <article class="service-card vulnerability-card scale-in delay-1">
+                <div class="service-icon">🛡️</div>
+                <h3>Análisis y gestión de vulnerabilidades</h3>
+                <p>
+                    Análisis de vulnerabilidades sobre un alcance definido, combinando escaneos periódicos con revisión manual de los hallazgos clave y priorización en función del impacto real. El objetivo es aportar visibilidad útil y un plan de corrección que se pueda aplicar.
+                </p>
+                <ul class="service-features">
+                    <li>Descubrimiento y mapeo del alcance</li>
+                    <li>Escaneos con revisión manual y priorización</li>
+                    <li>Plan de corrección y seguimiento</li>
+                </ul>
+                <a href="servicios.html#vulnerability" class="card-link-premium" title="Servicios de Gestión de Vulnerabilidades">Explorar VM →</a>
+            </article>
+
+            <article class="service-card pentesting-card scale-in delay-2">
+                <div class="service-icon">🎯</div>
+                <h3>Pentesting y Auditorías de Seguridad</h3>
+                <p>
+                    Pruebas manuales sobre aplicaciones, infraestructura y entornos cloud para ver qué es realmente explotable, más allá de lo que detecta un escáner automático. Trabajamos apoyándonos en OWASP y buenas prácticas de la industria, adaptando el enfoque al alcance de cada proyecto.
+                </p>
+                <ul class="service-features">
+                    <li>Auditorías externas e internas</li>
+                    <li>Pentesting cloud (AWS, Azure, GCP)</li>
+                    <li>Auditorías web, móviles y APIs</li>
+                    <li>Auditorías WiFi y entornos industriales (OT)</li>
+                    <li>Auditorías de código</li>
+                </ul>
+                <a href="servicios.html#pentesting" class="card-link-premium" title="Servicios de Pentesting Profesional">Ver Pentesting →</a>
+            </article>
+
+            <article class="service-card redteam-card scale-in delay-3">
+                <div class="service-icon">🔴</div>
+                <h3>Red Team Operations</h3>
+                <p>
+                    Ejercicios de <strong> Red Team </strong> orientados a comprobar cómo responden tus defensas ante un ataque realista. Definimos objetivos, reglas y un escenario que combine acceso inicial, movimiento lateral y simulación de impacto sobre activos.
+                </p>
+                <ul class="service-features">
+                    <li>Reconocimiento y perfilado objetivo</li>
+                    <li>Acceso inicial multi-vector</li>
+                    <li>Uso de TTPs basadas en MITRE ATT&CK y técnicas living-off-the-land</li>
+                    <li>Movimiento lateral y escalada de privilegios</li>
+                    <li>Simulación de impacto en activos críticos</li>
+                    <li>Informe técnico y ejecutivo con recomendaciones</li>
+                </ul>
+                <a href="servicios.html#redteam" class="card-link-premium" title="Servicios Red Team Operations">Ver Red Team Ops →</a>
+            </article>
+
+            <article class="service-card forensics-card scale-in delay-4">
+                <div class="service-icon">🔍</div>
+                <h3>Análisis Forense</h3>
+                <p>
+                    Investigación forense de sistemas para entender qué ha pasado y qué indicadores puedes reutilizar en detección.
+                </p>
+                <ul class="service-features">
+                    <li>Adquisición y análisis de discos, volcados de memoria y logs</li>
+                    <li>Reconstrucción de timelines</li>
+                    <li>Análisis de malware, extracción de IoCs y recomendaciones técnicas</li>
+                </ul>
+                <a href="servicios.html#forensics" class="card-link-premium" title="Servicios de Análisis Forense Digital">Ver Análisis Forense →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- METODOLOGÍA ELITE -->
+    <section class="home-section home-section-alt methodology-section fade-in">
+        <div class="section-header slide-left">
+            <p class="section-kicker">Metodología</p>
+            <h2>Protección empresarial con estándares de nivel gubernamental</h2>
+        </div>
+        <div class="methodology-grid">
+            <div class="methodology-item scale-in delay-1">
+                <h3>🎣 Defensa Informada por Amenazas</h3>
+                <p>
+                    Utilizamos el marco MITRE ATT&CK, NIST e inteligencia de amenazas 
+                    real para orientar cada evaluación hacia amenazas específicas de tu sector e infraestructura.
+                </p>
+            </div>
+            <div class="methodology-item scale-in delay-2">
+                <h3>📊 Enfoque Basado en Riesgo</h3>
+                <p>
+                    Priorizamos basado en riesgo real, combinando impacto empresarial, probabilidad de explotación, 
+                    panorama de amenazas y superficie de ataque para entregar recomendaciones accionables.
+                </p>
+            </div>
+            <div class="methodology-item scale-in delay-3">
+                <h3>🔄 Mejora Continua</h3>
+                <p>
+                    Programas de mejora continua con re-testing, seguimiento de métricas, evaluación de madurez 
+                    y hojas de ruta de seguridad a largo plazo para evolucionar tus defensas.
+                </p>
+            </div>
+            <div class="methodology-item scale-in delay-4">
+                <h3>📄 Documentación y Seguimiento</h3>
+                <p>
+                    Informes ejecutivos detallados, evidencias técnicas completas y planes de remediación 
+                    priorizados. Documentación profesional para presentar a dirección y equipos técnicos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINING & INTELLIGENCE -->
+    <section class="home-section home-section-academy training-section">
+        <div class="section-header">
+            <p class="section-kicker">Formación • En desarrollo</p>
+            <h2>ZeroSurface Academy</h2>
+        </div>
+        <div class="training-grid">
+            <div class="training-card">
+                <div class="training-icon">🎓</div>
+                <h3>Análisis Forense Digital</h3>
+                <p>
+                    Formación práctica en DFIR orientada a incidentes reales. Aprende adquisición, análisis de artefactos y construcción de timelines de forma aplicable.
+                </p>
+                <div class="training-features">
+                    <span class="feature-badge status-dev">🛠️ En desarrollo</span>
+                    <span class="feature-badge">Labs prácticos</span>
+                    <span class="feature-badge">Casos reales</span>
+                </div>
+                <a class="card-link-academy" href="recursos.html">Ver detalles →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL ELITE -->
+    <section class="home-section home-section-cta final-cta">
+        <div class="cta-inner">
+            <h2>🛡️ ¿Tu infraestructura está preparada para amenazas avanzadas?</h2>
+            <p>
+                Evalúa tu postura de ciberseguridad con servicios élite: desde gestión de vulnerabilidades 
+                hasta operaciones de red team. Identificamos riesgos críticos y construimos defensas 
+                resilientes contra adversarios reales en el panorama actual de amenazas.
+            </p>
+            <div class="cta-actions">
+                <a class="btn primary elite-btn" href="contacto.html">📞 Consulta Especializada</a>
+                <a class="btn ghost" href="servicios.html">🔍 Ver Capacidades</a>
+            </div>
+            <div class="cta-guarantee">
+                <p>📄 <strong>Garantía de Calidad:</strong> Informes accionables, metodologías probadas, confidencialidad absoluta</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 ZeroSurface Security.</p>
+        <nav class="footer-nav">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+// Animaciones de scroll estilo CyberXia
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observar todos los elementos con clases de animación
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
+    animatedElements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

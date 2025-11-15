@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OWASP Top 10 2024: Análisis Profundo y Técnicas de Explotación | ZeroSurface Security</title>
+    <meta name="description" content="Análisis técnico detallado del OWASP Top 10 2024: vulnerabilidades web críticas, técnicas de explotación, payloads reales y métodos de bypass. Guía profesional de pentesting." />
+    <meta name="keywords" content="owasp top 10 2024, pentesting web, sql injection, xss, vulnerabilidades web, security testing, ethical hacking" />
+    <meta name="author" content="ZeroSurface Security" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="canonical" href="../blog/owasp-top-10-2024-analisis-profundo.html" />
+</head>
+<body id="blog-post">
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/zerosurface-security-logo.png"
+                     alt="ZeroSurface Security"
+                     class="logo-img-security" />
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../servicios.html">Servicios</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../recursos.html">Academy</a></li>
+                <li><a href="../sobre.html">Sobre mí</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="site-main container">
+    <article class="blog-post">
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="category">🎯 Pentesting</span>
+                <span class="category">📅 Noviembre 2025</span>
+                <span class="category">⏱️ 15 min lectura</span>
+            </div>
+            <h1>OWASP Top 10 2024: Análisis Profundo y Técnicas de Explotación</h1>
+            <p class="post-lead">
+                Análisis técnico detallado de las 10 vulnerabilidades web más críticas según OWASP 2024, 
+                con ejemplos prácticos de explotación, payloads reales y técnicas avanzadas de bypass 
+                para controles de seguridad modernos.
+            </p>
+        </header>
+
+        <div class="post-content">
+            <h2>📋 Resumen Ejecutivo</h2>
+            <p>
+                El <strong>OWASP Top 10 2024</strong> presenta cambios significativos respecto a versiones anteriores, 
+                reflejando la evolución del panorama de amenazas web. Esta guía proporciona un análisis técnico 
+                profundo para profesionales de pentesting y red teams.
+            </p>
+
+            <div class="vulnerability-list">
+                <h3>🔥 Top 10 Vulnerabilidades 2024</h3>
+                <ol class="numbered-list">
+                    <li><strong>A01:2024 – Broken Access Control</strong></li>
+                    <li><strong>A02:2024 – Cryptographic Failures</strong></li>
+                    <li><strong>A03:2024 – Injection</strong></li>
+                    <li><strong>A04:2024 – Insecure Design</strong></li>
+                    <li><strong>A05:2024 – Security Misconfiguration</strong></li>
+                    <li><strong>A06:2024 – Vulnerable Components</strong></li>
+                    <li><strong>A07:2024 – Authentication Failures</strong></li>
+                    <li><strong>A08:2024 – Software and Data Integrity</strong></li>
+                    <li><strong>A09:2024 – Security Logging Failures</strong></li>
+                    <li><strong>A10:2024 – Server-Side Request Forgery</strong></li>
+                </ol>
+            </div>
+
+            <h2>🎯 A01: Broken Access Control - Análisis Técnico</h2>
+            <p>
+                <strong>Broken Access Control</strong> se mantiene en el #1 por tercer año consecutivo. 
+                Representa el 3.8% de todas las vulnerabilidades testadas, con una incidencia del 94% 
+                en aplicaciones evaluadas.
+            </p>
+
+            <h3>🔍 Vectores de Ataque Principales</h3>
+            <div class="code-example">
+                <h4>Bypass de Path Traversal:</h4>
+                <pre><code># URL original
+GET /user/profile?id=123
+
+# Vector de ataque - IDOR
+GET /user/profile?id=124
+GET /user/profile?id=../admin/config
+GET /user/profile?id=../../../../etc/passwd
+
+# Bypass con encoding
+GET /user/profile?id=%2e%2e%2f%2e%2e%2fadmin%2fconfig</code></pre>
+            </div>
+
+            <h3>⚡ Técnicas de Explotación Avanzada</h3>
+            <p>Las técnicas modernas incluyen:</p>
+            <ul>
+                <li><strong>Parameter Pollution:</strong> Explotación de HTTP Parameter Pollution para bypass</li>
+                <li><strong>JWT Manipulation:</strong> Ataques contra tokens JWT mal implementados</li>
+                <li><strong>GraphQL Introspection:</strong> Abuse de queries GraphQL no autorizadas</li>
+                <li><strong>API Rate Limiting Bypass:</strong> Elusión de controles de rate limiting</li>
+            </ul>
+
+            <h2>🛡️ A03: Injection - Evolución y Nuevas Técnicas</h2>
+            <p>
+                Aunque bajó desde el #1 en versiones anteriores, <strong>Injection</strong> sigue siendo crítica 
+                con nuevas variantes que afectan aplicaciones modernas.
+            </p>
+
+            <h3>📊 Nuevas Técnicas SQL Injection 2024</h3>
+            <div class="code-example">
+                <h4>NoSQL Injection en MongoDB:</h4>
+                <pre><code># Payload básico NoSQL
+{"username": {"$ne": null}, "password": {"$ne": null}}
+
+# Boolean-based blind NoSQL injection
+{"username": {"$regex": "^admin.*"}, "password": {"$ne": null}}
+
+# Time-based NoSQL injection  
+{"username": {"$where": "sleep(5000) || true"}, "password": "test"}</code></pre>
+            </div>
+
+            <h3>🔄 GraphQL Injection</h3>
+            <div class="code-example">
+                <pre><code># GraphQL injection via variables
+query GetUser($id: String!) {
+  user(id: $id) {
+    username
+    email
+  }
+}
+
+# Variable injection
+{"id": "1' UNION SELECT password FROM users--"}</code></pre>
+            </div>
+
+            <h2>🔐 A07: Authentication Failures - Bypass Moderno</h2>
+            <p>
+                Las fallas de autenticación han evolucionado con nuevos vectores que afectan 
+                implementaciones de OAuth, SAML y autenticación multifactor.
+            </p>
+
+            <h3>🎭 Técnicas de Bypass Avanzadas</h3>
+            <div class="technique-box">
+                <h4>🔓 OAuth Flow Manipulation</h4>
+                <p>Explotación de flujos OAuth mal implementados:</p>
+                <ul>
+                    <li><strong>State Parameter Bypass:</strong> Omisión de validación de parámetro state</li>
+                    <li><strong>Redirect URI Manipulation:</strong> Control de redirect_uri para token theft</li>
+                    <li><strong>Code Interception:</strong> Intercepción de authorization codes</li>
+                </ul>
+            </div>
+
+            <h2>⚔️ Herramientas y Metodologías de Testing</h2>
+            <p>
+                Para una evaluación completa del OWASP Top 10 2024, se recomienda la siguiente metodología 
+                y toolchain profesional:
+            </p>
+
+            <div class="tools-section">
+                <h3>🛠️ Toolchain Recomendado</h3>
+                <div class="tool-categories">
+                    <div class="tool-category">
+                        <h4>🌐 Web Application Security</h4>
+                        <ul>
+                            <li><strong>Burp Suite Professional</strong> - Testing manual avanzado</li>
+                            <li><strong>OWASP ZAP</strong> - Automated scanning y active testing</li>
+                            <li><strong>Nuclei</strong> - Vulnerability scanner con templates</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h4>💾 Specialized Tools</h4>
+                        <ul>
+                            <li><strong>SQLMap</strong> - Advanced SQL injection testing</li>
+                            <li><strong>NoSQLMap</strong> - NoSQL injection framework</li>
+                            <li><strong>JWT Tool</strong> - JWT manipulation y analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>🎯 Metodología de Testing Paso a Paso</h2>
+            <ol class="methodology-steps">
+                <li><strong>Reconnaissance:</strong> Information gathering y technology stack identification</li>
+                <li><strong>Authentication Testing:</strong> Bypass attempts y credential attacks</li>
+                <li><strong>Authorization Testing:</strong> IDOR, privilege escalation y access control bypass</li>
+                <li><strong>Input Validation:</strong> Injection testing en todos los vectores de entrada</li>
+                <li><strong>Session Management:</strong> Token analysis, session fixation y hijacking</li>
+                <li><strong>Error Handling:</strong> Information disclosure via error messages</li>
+                <li><strong>Business Logic:</strong> Application-specific logic flaws</li>
+            </ol>
+
+            <h2>🔍 Indicadores de Compromiso (IOCs)</h2>
+            <p>
+                Durante las evaluaciones de seguridad, estos son los indicadores típicos de explotación exitosa:
+            </p>
+            
+            <div class="iocs-table">
+                <h3>📈 Web Server Logs</h3>
+                <div class="code-example">
+                    <pre><code># SQL Injection attempts
+GET /search?q=admin' UNION SELECT password FROM users--
+POST /login.php username=admin'/**/UNION/**/SELECT/**/password/**/FROM/**/users--
+
+# Path traversal attempts  
+GET /download?file=../../../../etc/passwd
+GET /include?page=php://filter/convert.base64-encode/resource=config.php
+
+# Authentication bypass
+POST /admin/login bypass=true&user=admin&auth=false</code></pre>
+                </div>
+            </div>
+
+            <h2>🛡️ Medidas de Mitigación Avanzadas</h2>
+            <p>
+                Implementación de controles de seguridad efectivos para prevenir explotación 
+                de vulnerabilidades OWASP Top 10:
+            </p>
+
+            <div class="mitigation-strategies">
+                <h3>🔒 Defense in Depth Strategy</h3>
+                <ul>
+                    <li><strong>Input Validation:</strong> Whitelist validation con encoding apropiado</li>
+                    <li><strong>Output Encoding:</strong> Context-aware output encoding</li>
+                    <li><strong>Parameterized Queries:</strong> Prepared statements para prevenir injection</li>
+                    <li><strong>Access Controls:</strong> Principle of least privilege y role-based access</li>
+                    <li><strong>Security Headers:</strong> Implementación completa de security headers</li>
+                </ul>
+            </div>
+
+            <h2>📊 Conclusiones y Tendencias 2024</h2>
+            <p>
+                El OWASP Top 10 2024 refleja la realidad actual de las aplicaciones web modernas. 
+                Las principales tendencias incluyen:
+            </p>
+            
+            <ul class="conclusions-list">
+                <li><strong>API Security:</strong> Mayor enfoque en vulnerabilidades específicas de APIs</li>
+                <li><strong>Cloud Misconfigurations:</strong> Aumento de problemas de configuración en cloud</li>
+                <li><strong>Supply Chain Attacks:</strong> Mayor atención a componentes vulnerables</li>
+                <li><strong>Modern Authentication:</strong> Nuevos vectores en OAuth, SAML y JWT</li>
+            </ul>
+
+            <div class="next-steps">
+                <h3>🚀 Próximos Pasos</h3>
+                <p>
+                    Para implementar un programa de security testing efectivo basado en OWASP Top 10 2024, 
+                    considera nuestros <a href="../servicios.html#pentesting">servicios de pentesting profesional</a> 
+                    o explora nuestros <a href="../recursos.html">cursos avanzados de security testing</a>.
+                </p>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <div class="post-tags">
+                <span class="tag">OWASP</span>
+                <span class="tag">Pentesting</span>
+                <span class="tag">Web Security</span>
+                <span class="tag">Vulnerability Assessment</span>
+                <span class="tag">Security Testing</span>
+            </div>
+            
+            <div class="post-navigation">
+                <a href="../blog.html" class="back-to-blog">← Volver al Blog</a>
+                <div class="social-share">
+                    <span>Compartir:</span>
+                    <a href="#" title="Compartir en LinkedIn">LinkedIn</a>
+                    <a href="#" title="Compartir en Twitter">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </article>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 ZeroSurface Security.</p>
+        <nav class="footer-nav">
+            <a href="../aviso-legal.html">Aviso legal</a>
+            <a href="../privacidad.html">Privacidad</a>
+            <a href="../cookies.html">Cookies</a>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

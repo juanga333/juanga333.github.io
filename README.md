@@ -1,40 +1,71 @@
-# ZeroSurface – Pentesting y análisis forense
+# ZeroSurface Security – Web corporativa + ZeroSurface Academy
 
-Este repositorio contiene la web estática de **ZeroSurface**, centrada en:
+Este repositorio contiene la web estática de **ZeroSurface Security** y **ZeroSurface Academy**, centrada en:
 
-- Evaluación de amenazas y pentesting
+- Auditorías de aplicaciones (web, móvil, APIs) y revisión de código
+- Pentesting sobre entornos cloud, perímetro y WiFi
+- Ingeniería social (phishing, simulaciones) controlada
 - Análisis forense digital y reconstrucción de incidentes
-- Blog técnico y recursos (libros, guías, material práctico)
+- ZeroSurface Academy (formación práctica en forense y ciberseguridad)
+- Blog técnico orientado a procedimientos y casos reales
 
-La web se sirve mediante **GitHub Pages** desde este mismo repositorio (`juanga333.github.io`).
+La estética y los colores siguen la línea de los logos de ZeroSurface Security y ZeroSurface Academy
+(azules con fondo oscuro y halo de luz).
 
----
+## Estructura
 
-## Estructura del proyecto
+Archivos principales en la raíz:
 
-Archivos principales:
+- `index.html` – Página de inicio (ZeroSurface Security).
+- `servicios.html` – Detalle de los servicios.
+- `blog.html` – Índice del blog técnico.
+- `recursos.html` – ZeroSurface Academy (curso y formación).
+- `sobre.html` – Información sobre ZeroSurface y sobre Juan Gabriel Ruiz Fernández.
+- `contacto.html` – Formulario y datos de contacto.
+- `aviso-legal.html`, `privacidad.html`, `cookies.html` – Páginas legales.
+- `style.css` – Estilos comunes.
 
-- `index.html` – Página de inicio (hero, resumen de servicios, experiencia y CTA).
-- `servicios.html` – Detalle de servicios de pentesting y análisis forense.
-- `blog.html` – Listado de artículos técnicos (de momento con contenido placeholder).
-- `recursos.html` – Libros, guías y otros recursos relacionados con pentesting y forense.
-- `sobre.html` – Información sobre el responsable de ZeroSurface y el enfoque de trabajo.
-- `contacto.html` – Formulario de contacto y datos de correo.
-- `aviso-legal.html` – Aviso legal del sitio.
-- `privacidad.html` – Política de privacidad.
-- `cookies.html` – Política de cookies.
-- `style.css` – Hoja de estilos principal (tema oscuro, diseño responsive).
+Carpeta `blog/`:
 
----
+- `plantilla-post.html` – Plantilla para crear nuevas entradas.
+- `adquisicion-en-frio-principios-basicos.html` – Ejemplo de post.
 
-## Desarrollo local
+## Logos
 
-Al ser una web estática, no requiere compilación ni dependencias especiales.
+Guarda tus logos en la carpeta `img/` con estos nombres:
 
-Puedes probarla en local simplemente abriendo `index.html` en el navegador o sirviendo
-el directorio con cualquier servidor estático, por ejemplo:
+- `img/zerosurface-security-logo.png` – Logo de ZeroSurface Security sin fondo.
+- `img/zerosurface-academy-logo.png` – Logo de ZeroSurface Academy sin fondo.
+
+Si los ficheros tienen otro nombre, actualiza las rutas de imagen en `index.html` y `recursos.html`.
+
+## Uso en local
+
+Al ser una web estática, basta con abrir `index.html` en el navegador o servir el directorio con un servidor simple:
 
 ```bash
-# En Linux/macOS con Python 3
 python -m http.server 8000
-# Luego abre http://localhost:8000 en el navegador
+# y abrir http://localhost:8000
+```
+
+## Despliegue con GitHub Pages
+
+Configuración recomendada:
+
+- Nombre del repo: `juanga333.github.io`
+- Rama: `main`
+- Carpeta: `/ (root)`
+
+GitHub Pages publicará automáticamente el contenido en el dominio configurado.
+
+Cada vez que publiques cambios en `main`, la web se actualizará.
+
+## Pendiente de revisar
+
+Antes de usar la web en producción, revisa y adapta:
+
+- Datos reales en `aviso-legal.html`, `privacidad.html` y `cookies.html`.
+- Correo de contacto en `contacto.html` y páginas legales.
+- Contenido de `blog.html` y entradas de la carpeta `blog/`.
+- Enlace real de Gumroad en `recursos.html`.
+- Rutas de imagen de los logos si usas otros nombres.

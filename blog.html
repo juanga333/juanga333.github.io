@@ -1,62 +1,299 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Blog técnico de pentesting y forense | ZeroSurface</title>
-        <meta name="description" content="Blog técnico de ZeroSurface sobre evaluación de amenazas, pentesting y análisis forense digital." />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body id="blog">
-        <header class="site-header">
-            <div class="container header-inner">
-                <div class="logo">
-                    <a href="index.html">ZeroSurface</a>
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="recursos.html">Recursos</a></li>
-                        <li><a href="sobre.html">Sobre mí</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Ciberseguridad - Pentesting, Hacking Ético y Análisis Forense | ZeroSurface Security</title>
+    <meta name="description" content="📝 Blog especializado en ciberseguridad: guías de pentesting, análisis forense digital, vulnerabilidades, red team y threat intelligence. Contenido técnico profesional." />
+    <meta name="keywords" content="blog ciberseguridad, pentesting tutoriales, analisis forense digital, vulnerabilidades zero day, red team ttps, threat intelligence, ethical hacking, owasp top 10" />
+    
+    <!-- SEO Metadatos Blog -->
+    <meta name="author" content="ZeroSurface Security" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Blog de Ciberseguridad - ZeroSurface Security" />
+    <meta property="og:description" content="Contenido técnico avanzado sobre pentesting, análisis forense, vulnerabilidades y operaciones red team." />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="./blog.html" />
+    <link rel="canonical" href="./blog.html" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body id="blog">
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/zerosurface-security-logo.png"
+                    alt="ZeroSurface Security - Blog de Ciberseguridad"
+                    class="logo-img-security" />
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="recursos.html">Academy</a></li>
+                <li><a href="sobre.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="site-main container">
+
+    <h1>Blog de Ciberseguridad</h1>
+
+    <section class="blog-intro">
+        <!--<h2>Centro de Conocimiento en Ciberseguridad</h2>-->
+        <!--<p>
+            📊 <strong>Contenido técnico especializado</strong> en pentesting, análisis forense digital, 
+            operaciones red team, vulnerability research y threat intelligence. 
+            Guías prácticas, análisis de TTPs y estudios de casos reales para profesionales de ciberseguridad.
+        </p>
+    -->
+        
+        <div class="blog-categories">
+            <h3>Categorías Principales:</h3>
+            <div class="category-tags">
+                <span class="category-tag forensics">🔍 Forense</span>
+                <span class="category-tag redteam">🔴 Seguridad ofensiva</span>
+                <span class="category-tag vulnerabilities">🛡️ Researching</span>
             </div>
-        </header>
+        </div>
+        
+        <div class="blog-search-section">
+            <label for="blog-search">
+                🔍 Buscar artículos por tema, técnica o herramienta:
+            </label>
+            <input
+                type="search"
+                id="blog-search"
+                placeholder="Buscar artículos... (Ctrl+K para enfocar)"
+                class="search-input"
+            />
+        </div>
+    </section>
 
-        <main class="site-main container">
-            <h1>Blog técnico de ZeroSurface</h1>
-            <section class="blog-intro">
-    <p>
-        El blog de ZeroSurface está orientado a perfiles técnicos: pentesters, analistas forenses, blue team, equipos de
-        respuesta a incidentes y desarrolladores con interés en seguridad.
-    </p>
-    <p>
-        Próximamente publicaré artículos sobre evaluación de amenazas, técnicas de pentesting, análisis forense de sistemas
-        y casos prácticos basados en situaciones reales (debidamente anonimizadas).
-    </p>
-</section>
+    <!-- Listado de posts -->
+    <section class="blog-list slide-right">
+        <h2 class="fade-in">📝 Artículos y Guías Técnicas</h2>
 
-<section class="blog-list">
-    <h2>Artículos recientes</h2>
-    <p class="placeholder">
-        Aún no hay entradas publicadas. La sección se irá llenando con contenido técnico y práctico.
-    </p>
-</section>
+        <!-- Placeholder para futuros artículos -->
+        <div class="blog-placeholder scale-in delay-1">
+            <div class="placeholder-icon">📝</div>
+            <h3>Próximamente</h3>
+            <p>Estamos preparando contenido técnico avanzado sobre:</p>
+            <ul class="coming-soon-list">
+                <li class="scale-in delay-2">🎯 Pentesting</li>
+                <li class="scale-in delay-3">🔍 Análisis forense</li>
+                <li class="scale-in delay-5">🛡️ Vulnerability research y 0-days</li>
+            </ul>
+            <p class="placeholder-note fade-in delay-7">
+                Mientras tanto, puedes contactarme para consultas específicas sobre cualquiera de estos temas.
+            </p>
+        </div>
 
-        </main>
+        <div id="no-results" class="no-results-message" style="display:none; margin-top:2rem; text-align:center; padding:2rem; background:var(--bg-soft); border-radius:var(--radius-lg); border:1px solid var(--border);">
+            <h3 style="color:var(--muted); margin:0 0 0.5rem;">🔍 Sin resultados</h3>
+            <p style="color:var(--muted); margin:0;">No se encontraron artículos que coincidan con tu búsqueda.</p>
+        </div>
+    </section>
 
-        <footer class="site-footer">
-            <div class="container footer-inner">
-                <p>© 2025 ZeroSurface. Todos los derechos reservados.</p>
-                <nav class="footer-nav">
-                    <a href="aviso-legal.html">Aviso legal</a>
-                    <a href="privacidad.html">Privacidad</a>
-                    <a href="cookies.html">Cookies</a>
-                </nav>
-            </div>
-        </footer>
-    </body>
-    </html>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© 2025 ZeroSurface Security.</p>
+        <nav class="footer-nav">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+// Animaciones de scroll estilo CyberXia
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observar todos los elementos con clases de animación
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
+    animatedElements.forEach(el => observer.observe(el));
+});
+</script>
+
+<!-- Buscador avanzado con filtros por categoría -->
+<script>
+    (function () {
+        const input = document.getElementById('blog-search');
+        const items = Array.from(document.querySelectorAll('.blog-item'));
+        const emptyMsg = document.getElementById('no-results');
+        const categoryTags = Array.from(document.querySelectorAll('.category-tag'));
+        
+        let activeCategory = null;
+
+        if (!input) return;
+
+        function normalizar(texto) {
+            return texto
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '') // quitar tildes
+                .replace(/[^\w\s]/g, ' ') // reemplazar símbolos por espacios
+                .replace(/\s+/g, ' ') // unificar espacios múltiples
+                .trim();
+        }
+
+        function filtrar() {
+            const q = normalizar(input.value.trim());
+            let visibles = 0;
+
+            items.forEach(item => {
+                const texto = normalizar(item.textContent + ' ' + (item.dataset.tags || ''));
+                const coincideTexto = q === '' || texto.includes(q);
+                
+                // Filtro por categoría activa
+                let coincideCategoria = true;
+                if (activeCategory) {
+                    const tags = (item.dataset.tags || '').toLowerCase();
+                    coincideCategoria = tags.includes(activeCategory);
+                }
+                
+                const coincide = coincideTexto && coincideCategoria;
+                item.style.display = coincide ? '' : 'none';
+                if (coincide) visibles++;
+            });
+
+            if (emptyMsg) {
+                emptyMsg.style.display = visibles === 0 ? '' : 'none';
+            }
+        }
+
+        // Funcionalidad de filtro por categorías
+        categoryTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                const category = this.textContent.toLowerCase()
+                    .replace(/🎯|🔍|🔴|🛡️|📊|🔧/g, '')
+                    .trim();
+                
+                // Toggle category selection
+                if (activeCategory === category) {
+                    activeCategory = null;
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                } else {
+                    // Remove previous selection
+                    categoryTags.forEach(t => {
+                        t.style.transform = '';
+                        t.style.boxShadow = '';
+                    });
+                    
+                    activeCategory = category;
+                    this.style.transform = 'translateY(-2px) scale(1.05)';
+                    this.style.boxShadow = '0 8px 25px rgba(31, 120, 255, 0.3)';
+                }
+                
+                filtrar();
+            });
+            
+            // Añadir hover effect mejorado
+            tag.addEventListener('mouseenter', function() {
+                if (activeCategory !== this.textContent.toLowerCase().replace(/🎯|🔍|🔴|🛡️|📊|🔧/g, '').trim()) {
+                    this.style.transform = 'translateY(-2px)';
+                }
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                if (activeCategory !== this.textContent.toLowerCase().replace(/🎯|🔍|🔴|🛡️|📊|🔧/g, '').trim()) {
+                    this.style.transform = '';
+                }
+            });
+        });
+
+        // Auto-suggestions en el input
+        const suggestions = [
+            'pentesting', 'owasp', 'sql injection', 'xss', 'api security',
+            'forense', 'incident response', 'malware analysis', 'timeline',
+            'red team', 'mitre attack', 'apt simulation', 'social engineering',
+            'vulnerabilidades', 'zero day', 'cve', 'bug bounty',
+            'threat intelligence', 'iocs', 'ttps', 'apt groups',
+            'herramientas', 'kali linux', 'burp suite', 'metasploit'
+        ];
+
+        input.addEventListener('input', function() {
+            filtrar();
+            
+            // Simple auto-suggestion (could be enhanced with dropdown)
+            const value = this.value.toLowerCase();
+            if (value.length > 2) {
+                const matches = suggestions.filter(s => s.includes(value));
+                // Could implement dropdown here
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Ctrl/Cmd + K to focus search
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                input.focus();
+                input.select();
+            }
+            
+            // Escape to clear search
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = '';
+                activeCategory = null;
+                categoryTags.forEach(tag => {
+                    tag.style.transform = '';
+                    tag.style.boxShadow = '';
+                });
+                filtrar();
+            }
+        });
+
+        // Mostrar shortcut hint
+        input.placeholder = "Buscar artículos... (Ctrl+K para enfocar)";
+        
+        // Initialize
+        filtrar();
+    })();
+</script>
+
+<script>
+// Animaciones de scroll estilo CyberXia
+const animationObserverOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, animationObserverOptions);
+
+// Observar todos los elementos con clases de animación
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
+    animatedElements.forEach(el => animationObserver.observe(el));
+});
+</script>
+
+</body>
+</html>
