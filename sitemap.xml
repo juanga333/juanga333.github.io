@@ -1,61 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-     NOTA: Este sitemap utiliza URLs relativos para la portabilidad del dominio.
-     Los motores de búsqueda resolverán automáticamente las URLs completas basándose
-     en el dominio desde donde se sirve el sitio web.
+     NOTA: Este sitemap utiliza URLs absolutos para el dominio zerosurface.es
+     para optimizar el SEO y la indexación en motores de búsqueda.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>./</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>./servicios.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/servicios.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>./blog.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/blog.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>./recursos.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/recursos.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>./sobre.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/sobre.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>./contacto.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/contacto.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>./aviso-legal.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/aviso-legal.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>./privacidad.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/privacidad.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>./cookies.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <loc>https://zerosurface.es/cookies.html</loc>
+    <lastmod>2025-11-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
