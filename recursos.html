@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZeroSurface Academy · Formación práctica en ciberseguridad</title>
-    <meta name="description" content="ZeroSurface Academy ofrece formación técnica práctica en ciberseguridad ofensiva y forense digital. Curso de análisis forense digital próximamente disponible." />
+    <title>ZeroSurface Academy · Formación práctica en ciberseguridad y análisis forense</title>
+    <meta name="description" content="ZeroSurface Academy ofrece formación práctica en ciberseguridad ofensiva y análisis forense digital. Curso de análisis forense digital en preparación con labs y material descargable." />
+
     <link rel="stylesheet" href="style.css" />
 </head>
 <body id="recursos">
@@ -135,7 +136,12 @@
             <div class="contact-details">
                 <h3>Contacto directo</h3>
                 <p>Envía tus consultas sobre ZeroSurface Academy al correo:</p>
-                <a href="mailto:zerosurfacesec@gmail.com" class="email-link">zerosurfacesec@gmail.com</a>
+                <div class="email-actions">
+                    <a href="mailto:zerosurfacesec@gmail.com" class="email-link">zerosurfacesec@gmail.com</a>
+                    <button class="copy-email-btn" data-email="zerosurfacesec@gmail.com" title="Copiar email al portapapeles">
+                        📋 Copiar
+                    </button>
+                </div>
                 <p class="contact-note">
                     💡 <strong>Tip:</strong> Incluye en el asunto "Consulta Academy" para una respuesta más rápida
                 </p>
@@ -169,6 +175,77 @@
 </footer>
 
 <script>
+// Funcionalidad de copiar email
+function setupCopyButtons() {
+    const copyButtons = document.querySelectorAll('.copy-email-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            const email = button.getAttribute('data-email');
+            
+            try {
+                await navigator.clipboard.writeText(email);
+                showCopyNotification('Email copiado al portapapeles!');
+                
+                // Cambiar apariencia del botón temporalmente
+                const originalText = button.innerHTML;
+                button.innerHTML = '✓ Copiado';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+                
+            } catch (err) {
+                // Fallback para navegadores que no soportan clipboard API
+                fallbackCopyEmail(email);
+                showCopyNotification('Email copiado (manualmente)');
+            }
+        });
+    });
+}
+
+function fallbackCopyEmail(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+    } catch (err) {
+        console.error('Error al copiar:', err);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+function showCopyNotification(message) {
+    // Remover notificaciones existentes
+    const existing = document.querySelector('.copy-notification');
+    if (existing) existing.remove();
+    
+    // Crear nueva notificación
+    const notification = document.createElement('div');
+    notification.className = 'copy-notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    // Mostrar animación
+    setTimeout(() => notification.classList.add('show'), 10);
+    
+    // Ocultar después de 3 segundos
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -181,6 +258,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in').forEach(el => {
         observer.observe(el);
     });
+    
+    // Configurar botones de copiar
+    setupCopyButtons();
 });
 </script>
 </body>

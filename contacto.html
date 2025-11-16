@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - Consultoría Elite en Ciberseguridad | Pentesting, Red Team & Forense · ZeroSurface Security</title>
-    <meta name="description" content="Contacta con expertos en ciberseguridad para auditorías de penetración, red team operations, análisis forense y gestión de vulnerabilidades. Respuesta rápida y profesional." />
+    <title>Contacto · Pentesting y análisis forense · ZeroSurface Security</title>
+    <meta name="description" content="Contacta con ZeroSurface Security para proyectos de pentesting, análisis de vulnerabilidades, red team y análisis forense digital." />
+
     <link rel="stylesheet" href="style.css" />
 </head>
 <body id="contacto">
@@ -57,7 +58,12 @@
             <div class="contact-icon">📧</div>
             <h3>Email Profesional</h3>
             <p>Para consultas, presupuestos, incidentes o cualquier información sobre servicios de ciberseguridad</p>
-            <a href="mailto:zerosurfacesec@gmail.com" class="contact-button">zerosurfacesec@gmail.com</a>
+            <div class="email-actions">
+                <a href="mailto:zerosurfacesec@gmail.com" class="contact-button">zerosurfacesec@gmail.com</a>
+                <button class="copy-email-btn" data-email="zerosurfacesec@gmail.com" title="Copiar email al portapapeles">
+                    📋 Copiar
+                </button>
+            </div>
             <span class="response-time">Respuesta: < 24h</span>
         </div>
         
@@ -87,7 +93,7 @@
     <div class="faq-grid">
         <div class="faq-item scale-in delay-1">
             <h3>¿Cuánto tiempo toma una auditoría?</h3>
-            <p>Depende del alcance: pentesting web (3-5 días), auditoría de infraestructura (1-2 semanas), ejercicios de red team (12 semanas).</p>
+            <p>Depende del alcance: Pentesting Web (3-5 días), Auditoría de infraestructura (1-2 semanas), ejercicios de Red Team (12 semanas).</p>
         </div>
         <div class="faq-item scale-in delay-2">
             <h3>¿Trabajáis con acuerdos de confidencialidad?</h3>
@@ -124,10 +130,84 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Funcionalidad de copiar email
+function setupCopyButtons() {
+    const copyButtons = document.querySelectorAll('.copy-email-btn');
+    
+    copyButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            const email = button.getAttribute('data-email');
+            
+            try {
+                await navigator.clipboard.writeText(email);
+                showCopyNotification('Email copiado al portapapeles!');
+                
+                // Cambiar apariencia del botón temporalmente
+                const originalText = button.innerHTML;
+                button.innerHTML = '✓ Copiado';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+                
+            } catch (err) {
+                // Fallback para navegadores que no soportan clipboard API
+                fallbackCopyEmail(email);
+                showCopyNotification('Email copiado (manualmente)');
+            }
+        });
+    });
+}
+
+function fallbackCopyEmail(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+    } catch (err) {
+        console.error('Error al copiar:', err);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+function showCopyNotification(message) {
+    // Remover notificaciones existentes
+    const existing = document.querySelector('.copy-notification');
+    if (existing) existing.remove();
+    
+    // Crear nueva notificación
+    const notification = document.createElement('div');
+    notification.className = 'copy-notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    // Mostrar animación
+    setTimeout(() => notification.classList.add('show'), 10);
+    
+    // Ocultar después de 3 segundos
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
 // Observar todos los elementos con clases de animación
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
     animatedElements.forEach(el => observer.observe(el));
+    
+    // Configurar botones de copiar
+    setupCopyButtons();
     
     // Mejorar UX del formulario
     const form = document.querySelector('.contact-form-premium');
