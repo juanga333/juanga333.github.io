@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-     NOTA: Este sitemap utiliza URLs absolutos para el dominio zerosurface.es
-     para optimizar el SEO y la indexación en motores de búsqueda.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zerosurface.es/</loc>
