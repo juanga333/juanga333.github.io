@@ -1,19 +1,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: ./sitemap.xml
 
-# Crawl delay for politeness
 Crawl-delay: 1
 
-# Priority pages for crawlers
 Allow: /servicios.html
 Allow: /contacto.html
 Allow: /blog.html
 Allow: /recursos.html
 
-# Block any unwanted bots (optional)
 User-agent: AhrefsBot
 Disallow: /
 
